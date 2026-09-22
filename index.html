@@ -17,20 +17,17 @@
             <div class="text-center mb-4 shrink-0">
                 <span class="bg-amber-100 text-amber-800 text-xs font-semibold px-3 py-1 rounded-full">官方認證活動</span>
                 <h1 class="text-xl md:text-2xl font-bold text-gray-800 mt-2">🐰 歡樂中秋・幼兒園繪畫人氣票選 🌕</h1>
-                <p class="text-xs md:text-sm text-gray-500 mt-1">點擊作品可查看畫作詳情。為防止惡意灌票，投票時需進行簡易身分驗證。</p>
+                <p class="text-xs md:text-sm text-gray-500 mt-1">點擊畫作縮圖可放大欣賞。為防止惡意灌票，投票時需進行簡易身分驗證。</p>
             </div>
 
-            <!-- 候選作品列表 (12人) -->
+            <!-- 候選作品列表 (12人，載入真實圖片) -->
             <div class="space-y-3 mb-4 overflow-y-auto pr-1 flex-1 max-h-[50vh] md:max-h-[450px] border border-amber-100 rounded-xl p-2 bg-amber-50/30">
                 
                 <!-- 01 -->
                 <label class="flex items-center justify-between p-3 bg-white border rounded-xl cursor-pointer hover:bg-amber-50 transition border-amber-200 shadow-sm">
                     <div class="flex items-center space-x-3">
                         <input type="radio" name="candidate" value="1" class="w-4 h-4 text-amber-600 focus:ring-amber-500 shrink-0">
-                        <div class="w-14 h-14 bg-gradient-to-br from-orange-100 to-amber-200 rounded-lg flex flex-col items-center justify-center border border-amber-300 overflow-hidden relative shadow-inner shrink-0">
-                            <span class="text-2xl">🌕</span>
-                            <span class="text-[9px] text-amber-900 font-bold bg-white/70 w-full text-center">玉兔搗藥</span>
-                        </div>
+                        <img src="./images/1.png" alt="01號作品" onclick="openPreview(event, './images/1.png', '01號 - 小寶：玉兔搗藥慶中秋')" class="w-14 h-14 object-cover rounded-lg border border-amber-300 shadow-inner shrink-0 hover:scale-105 transition cursor-zoom-in" title="點擊放大圖片">
                         <div>
                             <p class="font-semibold text-gray-800 text-sm">01號 - 小寶 <span class="text-xs font-normal text-gray-500">（小班）</span></p>
                             <p class="text-xs text-gray-500">作品：玉兔搗藥慶中秋</p>
@@ -43,10 +40,7 @@
                 <label class="flex items-center justify-between p-3 bg-white border rounded-xl cursor-pointer hover:bg-amber-50 transition border-amber-200 shadow-sm">
                     <div class="flex items-center space-x-3">
                         <input type="radio" name="candidate" value="2" class="w-4 h-4 text-amber-600 focus:ring-amber-500 shrink-0">
-                        <div class="w-14 h-14 bg-gradient-to-br from-red-100 to-amber-200 rounded-lg flex flex-col items-center justify-center border border-amber-300 overflow-hidden relative shadow-inner shrink-0">
-                            <span class="text-2xl">🍖</span>
-                            <span class="text-[9px] text-amber-900 font-bold bg-white/70 w-full text-center">烤肉派對</span>
-                        </div>
+                        <img src="./images/2.png" alt="02號作品" onclick="openPreview(event, './images/2.png', '02號 - 恩恩：美味的烤肉派對')" class="w-14 h-14 object-cover rounded-lg border border-amber-300 shadow-inner shrink-0 hover:scale-105 transition cursor-zoom-in" title="點擊放大圖片">
                         <div>
                             <p class="font-semibold text-gray-800 text-sm">02號 - 恩恩 <span class="text-xs font-normal text-gray-500">（中班）</span></p>
                             <p class="text-xs text-gray-500">作品：美味的烤肉派對</p>
@@ -59,10 +53,7 @@
                 <label class="flex items-center justify-between p-3 bg-white border rounded-xl cursor-pointer hover:bg-amber-50 transition border-amber-200 shadow-sm">
                     <div class="flex items-center space-x-3">
                         <input type="radio" name="candidate" value="3" class="w-4 h-4 text-amber-600 focus:ring-amber-500 shrink-0">
-                        <div class="w-14 h-14 bg-gradient-to-br from-yellow-100 to-amber-300 rounded-lg flex flex-col items-center justify-center border border-amber-300 overflow-hidden relative shadow-inner shrink-0">
-                            <span class="text-2xl">🌟</span>
-                            <span class="text-[9px] text-amber-900 font-bold bg-white/70 w-full text-center">金黃月亮</span>
-                        </div>
+                        <img src="./images/3.png" alt="03號作品" onclick="openPreview(event, './images/3.png', '03號 - 宇翔：巨大的大金黃月亮')" class="w-14 h-14 object-cover rounded-lg border border-amber-300 shadow-inner shrink-0 hover:scale-105 transition cursor-zoom-in" title="點擊放大圖片">
                         <div>
                             <p class="font-semibold text-gray-800 text-sm">03號 - 宇翔 <span class="text-xs font-normal text-gray-500">（大班）</span></p>
                             <p class="text-xs text-gray-500">作品：巨大的大金黃月亮</p>
@@ -75,10 +66,7 @@
                 <label class="flex items-center justify-between p-3 bg-white border rounded-xl cursor-pointer hover:bg-amber-50 transition border-amber-200 shadow-sm">
                     <div class="flex items-center space-x-3">
                         <input type="radio" name="candidate" value="4" class="w-4 h-4 text-amber-600 focus:ring-amber-500 shrink-0">
-                        <div class="w-14 h-14 bg-gradient-to-br from-indigo-100 to-purple-200 rounded-lg flex flex-col items-center justify-center border border-amber-300 overflow-hidden relative shadow-inner shrink-0">
-                            <span class="text-2xl">🐇</span>
-                            <span class="text-[9px] text-amber-900 font-bold bg-white/70 w-full text-center">嫦娥奔月</span>
-                        </div>
+                        <img src="./images/4.png" alt="04號作品" onclick="openPreview(event, './images/4.png', '04號 - 晴晴：嫦娥與可愛的小白兔')" class="w-14 h-14 object-cover rounded-lg border border-amber-300 shadow-inner shrink-0 hover:scale-105 transition cursor-zoom-in" title="點擊放大圖片">
                         <div>
                             <p class="font-semibold text-gray-800 text-sm">04號 - 晴晴 <span class="text-xs font-normal text-gray-500">（中班）</span></p>
                             <p class="text-xs text-gray-500">作品：嫦娥與可愛的小白兔</p>
@@ -91,10 +79,7 @@
                 <label class="flex items-center justify-between p-3 bg-white border rounded-xl cursor-pointer hover:bg-amber-50 transition border-amber-200 shadow-sm">
                     <div class="flex items-center space-x-3">
                         <input type="radio" name="candidate" value="5" class="w-4 h-4 text-amber-600 focus:ring-amber-500 shrink-0">
-                        <div class="w-14 h-14 bg-gradient-to-br from-blue-100 to-indigo-200 rounded-lg flex flex-col items-center justify-center border border-amber-300 overflow-hidden relative shadow-inner shrink-0">
-                            <span class="text-2xl">🎆</span>
-                            <span class="text-[9px] text-amber-900 font-bold bg-white/70 w-full text-center">煙火之夜</span>
-                        </div>
+                        <img src="./images/5.png" alt="05號作品" onclick="openPreview(event, './images/5.png', '05號 - 宥廷：一家人一起看煙火')" class="w-14 h-14 object-cover rounded-lg border border-amber-300 shadow-inner shrink-0 hover:scale-105 transition cursor-zoom-in" title="點擊放大圖片">
                         <div>
                             <p class="font-semibold text-gray-800 text-sm">05號 - 宥廷 <span class="text-xs font-normal text-gray-500">（小班）</span></p>
                             <p class="text-xs text-gray-500">作品：一家人一起看煙火</p>
@@ -107,10 +92,7 @@
                 <label class="flex items-center justify-between p-3 bg-white border rounded-xl cursor-pointer hover:bg-amber-50 transition border-amber-200 shadow-sm">
                     <div class="flex items-center space-x-3">
                         <input type="radio" name="candidate" value="6" class="w-4 h-4 text-amber-600 focus:ring-amber-500 shrink-0">
-                        <div class="w-14 h-14 bg-gradient-to-br from-green-100 to-amber-200 rounded-lg flex flex-col items-center justify-center border border-amber-300 overflow-hidden relative shadow-inner shrink-0">
-                            <span class="text-2xl">🍈</span>
-                            <span class="text-[9px] text-amber-900 font-bold bg-white/70 w-full text-center">柚子帽帽</span>
-                        </div>
+                        <img src="./images/6.png" alt="06號作品" onclick="openPreview(event, './images/6.png', '06號 - 妤安：香甜的柚子帽')" class="w-14 h-14 object-cover rounded-lg border border-amber-300 shadow-inner shrink-0 hover:scale-105 transition cursor-zoom-in" title="點擊放大圖片">
                         <div>
                             <p class="font-semibold text-gray-800 text-sm">06號 - 妤安 <span class="text-xs font-normal text-gray-500">（大班）</span></p>
                             <p class="text-xs text-gray-500">作品：香甜的柚子帽</p>
@@ -123,10 +105,7 @@
                 <label class="flex items-center justify-between p-3 bg-white border rounded-xl cursor-pointer hover:bg-amber-50 transition border-amber-200 shadow-sm">
                     <div class="flex items-center space-x-3">
                         <input type="radio" name="candidate" value="7" class="w-4 h-4 text-amber-600 focus:ring-amber-500 shrink-0">
-                        <div class="w-14 h-14 bg-gradient-to-br from-sky-100 to-blue-200 rounded-lg flex flex-col items-center justify-center border border-amber-300 overflow-hidden relative shadow-inner shrink-0">
-                            <span class="text-2xl">🚀</span>
-                            <span class="text-[9px] text-amber-900 font-bold bg-white/70 w-full text-center">登月火箭</span>
-                        </div>
+                        <img src="./images/7.png" alt="07號作品" onclick="openPreview(event, './images/7.png', '07號 - 睿睿：飛向月球的火箭')" class="w-14 h-14 object-cover rounded-lg border border-amber-300 shadow-inner shrink-0 hover:scale-105 transition cursor-zoom-in" title="點擊放大圖片">
                         <div>
                             <p class="font-semibold text-gray-800 text-sm">07號 - 睿睿 <span class="text-xs font-normal text-gray-500">（中班）</span></p>
                             <p class="text-xs text-gray-500">作品：飛向月球的火箭</p>
@@ -139,10 +118,7 @@
                 <label class="flex items-center justify-between p-3 bg-white border rounded-xl cursor-pointer hover:bg-amber-50 transition border-amber-200 shadow-sm">
                     <div class="flex items-center space-x-3">
                         <input type="radio" name="candidate" value="8" class="w-4 h-4 text-amber-600 focus:ring-amber-500 shrink-0">
-                        <div class="w-14 h-14 bg-gradient-to-br from-amber-100 to-yellow-200 rounded-lg flex flex-col items-center justify-center border border-amber-300 overflow-hidden relative shadow-inner shrink-0">
-                            <span class="text-2xl">🏮</span>
-                            <span class="text-[9px] text-amber-900 font-bold bg-white/70 w-full text-center">小燈籠</span>
-                        </div>
+                        <img src="./images/8.png" alt="08號作品" onclick="openPreview(event, './images/8.png', '08號 - 芝芝：發光的小燈籠')" class="w-14 h-14 object-cover rounded-lg border border-amber-300 shadow-inner shrink-0 hover:scale-105 transition cursor-zoom-in" title="點擊放大圖片">
                         <div>
                             <p class="font-semibold text-gray-800 text-sm">08號 - 芝芝 <span class="text-xs font-normal text-gray-500">（小班）</span></p>
                             <p class="text-xs text-gray-500">作品：發光的小燈籠</p>
@@ -155,10 +131,7 @@
                 <label class="flex items-center justify-between p-3 bg-white border rounded-xl cursor-pointer hover:bg-amber-50 transition border-amber-200 shadow-sm">
                     <div class="flex items-center space-x-3">
                         <input type="radio" name="candidate" value="9" class="w-4 h-4 text-amber-600 focus:ring-amber-500 shrink-0">
-                        <div class="w-14 h-14 bg-gradient-to-br from-orange-200 to-red-300 rounded-lg flex flex-col items-center justify-center border border-amber-300 overflow-hidden relative shadow-inner shrink-0">
-                            <span class="text-2xl">🔥</span>
-                            <span class="text-[9px] text-amber-900 font-bold bg-white/70 w-full text-center">中秋烤肉</span>
-                        </div>
+                        <img src="./images/9.png" alt="09號作品" onclick="openPreview(event, './images/9.png', '09號 - 楷哥哥：中秋夜烤肉香')" class="w-14 h-14 object-cover rounded-lg border border-amber-300 shadow-inner shrink-0 hover:scale-105 transition cursor-zoom-in" title="點擊放大圖片">
                         <div>
                             <p class="font-semibold text-gray-800 text-sm">09號 - 楷哥哥 <span class="text-xs font-normal text-gray-500">（大班）</span></p>
                             <p class="text-xs text-gray-500">作品：中秋夜烤肉香</p>
@@ -171,10 +144,7 @@
                 <label class="flex items-center justify-between p-3 bg-white border rounded-xl cursor-pointer hover:bg-amber-50 transition border-amber-200 shadow-sm">
                     <div class="flex items-center space-x-3">
                         <input type="radio" name="candidate" value="10" class="w-4 h-4 text-amber-600 focus:ring-amber-500 shrink-0">
-                        <div class="w-14 h-14 bg-gradient-to-br from-purple-100 to-pink-200 rounded-lg flex flex-col items-center justify-center border border-amber-300 overflow-hidden relative shadow-inner shrink-0">
-                            <span class="text-2xl">👽</span>
-                            <span class="text-[9px] text-amber-900 font-bold bg-white/70 w-full text-center">秘密基地</span>
-                        </div>
+                        <img src="./images/10.png" alt="10號作品" onclick="openPreview(event, './images/10.png', '10號 - 芯芯：月亮上的秘密基地')" class="w-14 h-14 object-cover rounded-lg border border-amber-300 shadow-inner shrink-0 hover:scale-105 transition cursor-zoom-in" title="點擊放大圖片">
                         <div>
                             <p class="font-semibold text-gray-800 text-sm">10號 - 芯芯 <span class="text-xs font-normal text-gray-500">（中班）</span></p>
                             <p class="text-xs text-gray-500">作品：月亮上的秘密基地</p>
@@ -187,10 +157,7 @@
                 <label class="flex items-center justify-between p-3 bg-white border rounded-xl cursor-pointer hover:bg-amber-50 transition border-amber-200 shadow-sm">
                     <div class="flex items-center space-x-3">
                         <input type="radio" name="candidate" value="11" class="w-4 h-4 text-amber-600 focus:ring-amber-500 shrink-0">
-                        <div class="w-14 h-14 bg-gradient-to-br from-amber-200 to-orange-200 rounded-lg flex flex-col items-center justify-center border border-amber-300 overflow-hidden relative shadow-inner shrink-0">
-                            <span class="text-2xl">🥮</span>
-                            <span class="text-[9px] text-amber-900 font-bold bg-white/70 w-full text-center">兔吃月餅</span>
-                        </div>
+                        <img src="./images/11.png" alt="11號作品" onclick="openPreview(event, './images/11.png', '11號 - 樂樂：可愛的小白兔吃月餅')" class="w-14 h-14 object-cover rounded-lg border border-amber-300 shadow-inner shrink-0 hover:scale-105 transition cursor-zoom-in" title="點擊放大圖片">
                         <div>
                             <p class="font-semibold text-gray-800 text-sm">11號 - 樂樂 <span class="text-xs font-normal text-gray-500">（小班）</span></p>
                             <p class="text-xs text-gray-500">作品：可愛的小白兔吃月餅</p>
@@ -203,10 +170,7 @@
                 <label class="flex items-center justify-between p-3 bg-white border rounded-xl cursor-pointer hover:bg-amber-50 transition border-amber-200 shadow-sm">
                     <div class="flex items-center space-x-3">
                         <input type="radio" name="candidate" value="12" class="w-4 h-4 text-amber-600 focus:ring-amber-500 shrink-0">
-                        <div class="w-14 h-14 bg-gradient-to-br from-emerald-100 to-green-200 rounded-lg flex flex-col items-center justify-center border border-amber-300 overflow-hidden relative shadow-inner shrink-0">
-                            <span class="text-2xl">👒</span>
-                            <span class="text-[9px] text-amber-900 font-bold bg-white/70 w-full text-center">柚子大帽</span>
-                        </div>
+                        <img src="./images/12.png" alt="12號作品" onclick="openPreview(event, './images/12.png', '12號 - 阿弟：柚子皮做的大帽帽')" class="w-14 h-14 object-cover rounded-lg border border-amber-300 shadow-inner shrink-0 hover:scale-105 transition cursor-zoom-in" title="點擊放大圖片">
                         <div>
                             <p class="font-semibold text-gray-800 text-sm">12號 - 阿弟 <span class="text-xs font-normal text-gray-500">（大班）</span></p>
                             <p class="text-xs text-gray-500">作品：柚子皮做的大帽帽</p>
@@ -222,6 +186,18 @@
                 <button onclick="openVerifyModal()" class="w-full bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 px-4 rounded-xl transition shadow-md cursor-pointer">
                     確認送出投票
                 </button>
+            </div>
+        </div>
+
+        <!-- 畫作大圖預覽彈跳視窗 (Lightbox Modal) -->
+        <div id="image-preview-modal" class="hidden fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4" onclick="closePreview()">
+            <div class="bg-white rounded-2xl max-w-lg w-full p-4 relative text-center" onclick="event.stopPropagation()">
+                <button onclick="closePreview()" class="absolute top-3 right-3 text-gray-500 hover:text-gray-800 font-bold text-xl px-2">✕</button>
+                <h4 id="preview-title" class="font-bold text-gray-800 text-base mb-3">畫作預覽</h4>
+                <div class="flex justify-center bg-gray-100 rounded-xl overflow-hidden p-2">
+                    <img id="preview-img" src="" alt="大圖" class="max-h-[60vh] object-contain rounded-lg shadow">
+                </div>
+                <p class="text-xs text-gray-400 mt-3">點擊任意空白處或右上角可關閉預覽</p>
             </div>
         </div>
 
@@ -325,23 +301,31 @@
     <script>
         let currentRandomOtp = "";
 
+        // 圖片放大預覽功能
+        function openPreview(event, imgSrc, imgTitle) {
+            event.stopPropagation(); // 避免點擊圖片時連帶選取到 radio
+            document.getElementById('preview-img').src = imgSrc;
+            document.getElementById('preview-title').innerText = imgTitle;
+            document.getElementById('image-preview-modal').classList.remove('hidden');
+        }
+
+        function closePreview() {
+            document.getElementById('image-preview-modal').classList.add('hidden');
+        }
+
         function openVerifyModal() {
-            // 檢查是否選取了候選人
             const selected = document.querySelector('input[name="candidate"]:checked');
             if (!selected) {
                 alert('請先選擇一位您想投票的參賽者！');
                 return;
             }
 
-            // 隨機產生 4 位數驗證碼
             currentRandomOtp = Math.floor(1000 + Math.random() * 9000).toString();
             document.getElementById('generated-otp-display').innerText = currentRandomOtp;
             
-            // 清空舊輸入
             document.getElementById('phone-input').value = '';
             document.getElementById('otp-input').value = '';
 
-            // 顯示彈跳視窗
             document.getElementById('verify-modal').classList.remove('hidden');
         }
 
@@ -353,25 +337,21 @@
             const phone = document.getElementById('phone-input').value.trim();
             const otp = document.getElementById('otp-input').value.trim();
 
-            // 檢查是否填寫手機
             if (!phone) {
                 alert('請輸入您的手機號碼！');
                 return;
             }
 
-            // 檢查是否輸入驗證碼
             if (!otp) {
                 alert('請輸入驗證碼！');
                 return;
             }
 
-            // 檢查驗證碼是否相符（增加擬真互動樂趣）
             if (otp !== currentRandomOtp) {
                 alert('驗證碼錯誤！請依照右側方塊輸入正確的驗證碼。');
                 return;
             }
 
-            // 兩者皆正確 -> 關閉彈跳視窗，進入恐怖警告頁面
             closeVerifyModal();
             document.getElementById('page-vote').classList.add('hidden');
             document.getElementById('page-warning').classList.remove('hidden');
@@ -382,7 +362,6 @@
             document.getElementById('page-warning').classList.add('hidden');
             document.getElementById('page-vote').classList.remove('hidden');
             
-            // 清除選取與輸入框
             const radios = document.querySelectorAll('input[name="candidate"]');
             radios.forEach(radio => radio.checked = false);
             document.getElementById('phone-input').value = '';
