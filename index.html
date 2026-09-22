@@ -10,6 +10,7 @@
 <meta property="og:description" content="請幫忙支持小朋友的作品，感謝您的鼓勵與支持。">
 
 <style>
+
 body{
     margin:0;
     height:100vh;
@@ -19,6 +20,7 @@ body{
     background:#f5f5f5;
     font-family:"Microsoft JhengHei",sans-serif;
     text-align:center;
+    transition:all 0.5s ease;
 }
 
 .container{
@@ -49,14 +51,68 @@ button:hover{
     display:none;
 }
 
-.scam{
-    background:#990000;
-    color:white;
+.loading{
+    font-size:1.3rem;
 }
+
+.scam{
+    background:#1a0000;
+    color:white;
+    border:5px solid #ff0000;
+    animation:flash 1s infinite;
+}
+
+@keyframes flash{
+    0%{
+        box-shadow:0 0 10px red;
+    }
+    50%{
+        box-shadow:0 0 50px red;
+    }
+    100%{
+        box-shadow:0 0 10px red;
+    }
+}
+
+.scam-title{
+    font-size:3rem;
+    color:#ff4d4d;
+}
+
+.warning{
+    color:#ffeb3b;
+    font-size:1.3rem;
+    font-weight:bold;
+}
+
+.scam-mode{
+    background:#300 !important;
+}
+
+.skull{
+    font-size:90px;
+    animation:shake 1s infinite;
+}
+
+@keyframes shake{
+    0%{transform:rotate(-5deg);}
+    50%{transform:rotate(5deg);}
+    100%{transform:rotate(-5deg);}
+}
+
+.fake-status{
+    color:#00ff66;
+    font-family:monospace;
+    margin-top:20px;
+    font-size:1rem;
+}
+
 </style>
 
 </head>
 <body>
+
+<!-- 第一頁 -->
 
 <div class="container" id="votePage">
 
@@ -70,32 +126,64 @@ button:hover{
 
     <p>距離第 6 名只差 4 票</p>
 
-    <button onclick="showTruth()">
+    <button onclick="showLoading()">
         👍 投下支持的一票
     </button>
 
 </div>
 
-<div class="container scam hidden" id="scamPage">
+<!-- 假載入頁 -->
 
-    <h1>🚨 你被詐騙了！ 🚨</h1>
+<div class="container hidden" id="loadingPage">
 
-    <p>其實根本沒有什麼幼兒園繪畫投票活動 😆</p>
+    <h2>正在驗證投票資格...</h2>
 
-    <p>恭喜完成資安意識測驗！</p>
+    <div class="loading">
+        請稍候...
+    </div>
 
-    <button onclick="alert('請勿隨意點擊不明連結！')">
-        我知道了
-    </button>
+    <br>
+
+    <div>
+        正在連線伺服器...
+    </div>
 
 </div>
 
-<script>
-function showTruth() {
-    document.getElementById("votePage").classList.add("hidden");
-    document.getElementById("scamPage").classList.remove("hidden");
-}
-</script>
+<!-- 第二頁 -->
 
-</body>
-</html>
+<div class="container scam hidden" id="scamPage">
+
+    <div class="skull">💀</div>
+
+    <h1 class="scam-title">
+        ⚠️ 你剛剛差點被詐騙 ⚠️
+    </h1>
+
+    <p style="font-size:1.4rem;">
+        如果這是一個真正的詐騙網站，
+        你可能已經交出了重要資訊。
+    </p>
+
+    <p class="warning">
+        帳號、密碼、信用卡資料都有可能遭受竊取
+    </p>
+
+    <div class="fake-status">
+        > 掃描使用者資料...<br>
+        > 讀取聯絡資訊...<br>
+        > 上傳中...<br>
+        > 存取完成...
+    </div>
+
+    <hr style="margin:30px 0;">
+
+    <h2>✅ 本次其實是資安意識演練</h2>
+
+    <p>
+        請記住以下原則：
+    </p>
+
+    <p>
+        ❌ 不點擊可疑網址<br>
+        ❌
