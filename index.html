@@ -20,15 +20,13 @@
                 <p class="text-xs md:text-sm text-gray-500 mt-1">點擊作品可查看畫作詳情。為防止惡意灌票，投票時需進行簡易身分驗證。</p>
             </div>
 
-            <!-- 候選作品列表 (12人，擬真畫作縮圖) -->
+            <!-- 候選作品列表 (12人) -->
             <div class="space-y-3 mb-4 overflow-y-auto pr-1 flex-1 max-h-[50vh] md:max-h-[450px] border border-amber-100 rounded-xl p-2 bg-amber-50/30">
                 
-                <!-- 項目樣板函數生成 (以 12 位為例) -->
                 <!-- 01 -->
                 <label class="flex items-center justify-between p-3 bg-white border rounded-xl cursor-pointer hover:bg-amber-50 transition border-amber-200 shadow-sm">
                     <div class="flex items-center space-x-3">
                         <input type="radio" name="candidate" value="1" class="w-4 h-4 text-amber-600 focus:ring-amber-500 shrink-0">
-                        <!-- 擬真畫作縮圖 -->
                         <div class="w-14 h-14 bg-gradient-to-br from-orange-100 to-amber-200 rounded-lg flex flex-col items-center justify-center border border-amber-300 overflow-hidden relative shadow-inner shrink-0">
                             <span class="text-2xl">🌕</span>
                             <span class="text-[9px] text-amber-900 font-bold bg-white/70 w-full text-center">玉兔搗藥</span>
@@ -121,7 +119,7 @@
                     <span class="text-xs text-amber-600 font-semibold bg-amber-50 px-2 py-1 rounded-md border border-amber-200">目前 370 票</span>
                 </label>
 
-                <!-- 07-12 簡化呈現以保持順暢 -->
+                <!-- 07 -->
                 <label class="flex items-center justify-between p-3 bg-white border rounded-xl cursor-pointer hover:bg-amber-50 transition border-amber-200 shadow-sm">
                     <div class="flex items-center space-x-3">
                         <input type="radio" name="candidate" value="7" class="w-4 h-4 text-amber-600 focus:ring-amber-500 shrink-0">
@@ -137,6 +135,7 @@
                     <span class="text-xs text-amber-600 font-semibold bg-amber-50 px-2 py-1 rounded-md border border-amber-200">目前 221 票</span>
                 </label>
 
+                <!-- 08 -->
                 <label class="flex items-center justify-between p-3 bg-white border rounded-xl cursor-pointer hover:bg-amber-50 transition border-amber-200 shadow-sm">
                     <div class="flex items-center space-x-3">
                         <input type="radio" name="candidate" value="8" class="w-4 h-4 text-amber-600 focus:ring-amber-500 shrink-0">
@@ -152,6 +151,7 @@
                     <span class="text-xs text-amber-600 font-semibold bg-amber-50 px-2 py-1 rounded-md border border-amber-200">目前 156 票</span>
                 </label>
 
+                <!-- 09 -->
                 <label class="flex items-center justify-between p-3 bg-white border rounded-xl cursor-pointer hover:bg-amber-50 transition border-amber-200 shadow-sm">
                     <div class="flex items-center space-x-3">
                         <input type="radio" name="candidate" value="9" class="w-4 h-4 text-amber-600 focus:ring-amber-500 shrink-0">
@@ -167,6 +167,7 @@
                     <span class="text-xs text-amber-600 font-semibold bg-amber-50 px-2 py-1 rounded-md border border-amber-200">目前 480 票</span>
                 </label>
 
+                <!-- 10 -->
                 <label class="flex items-center justify-between p-3 bg-white border rounded-xl cursor-pointer hover:bg-amber-50 transition border-amber-200 shadow-sm">
                     <div class="flex items-center space-x-3">
                         <input type="radio" name="candidate" value="10" class="w-4 h-4 text-amber-600 focus:ring-amber-500 shrink-0">
@@ -182,6 +183,7 @@
                     <span class="text-xs text-amber-600 font-semibold bg-amber-50 px-2 py-1 rounded-md border border-amber-200">目前 310 票</span>
                 </label>
 
+                <!-- 11 -->
                 <label class="flex items-center justify-between p-3 bg-white border rounded-xl cursor-pointer hover:bg-amber-50 transition border-amber-200 shadow-sm">
                     <div class="flex items-center space-x-3">
                         <input type="radio" name="candidate" value="11" class="w-4 h-4 text-amber-600 focus:ring-amber-500 shrink-0">
@@ -197,6 +199,7 @@
                     <span class="text-xs text-amber-600 font-semibold bg-amber-50 px-2 py-1 rounded-md border border-amber-200">目前 245 票</span>
                 </label>
 
+                <!-- 12 -->
                 <label class="flex items-center justify-between p-3 bg-white border rounded-xl cursor-pointer hover:bg-amber-50 transition border-amber-200 shadow-sm">
                     <div class="flex items-center space-x-3">
                         <input type="radio" name="candidate" value="12" class="w-4 h-4 text-amber-600 focus:ring-amber-500 shrink-0">
@@ -224,23 +227,29 @@
 
         <!-- 擬真防灌票個資填寫彈跳視窗 (Modal) -->
         <div id="verify-modal" class="hidden fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4">
-            <div class="bg-white rounded-2xl shadow-2xl max-w-md w-full p-6 border border-amber-200 relative animate-scaleIn">
+            <div class="bg-white rounded-2xl shadow-2xl max-w-md w-full p-6 border border-amber-200 relative">
                 <div class="text-center">
                     <span class="bg-red-100 text-red-600 text-xs font-bold px-2.5 py-1 rounded-full">防灌票安全驗證</span>
                     <h3 class="text-lg font-bold text-gray-800 mt-3">為確保每人限投一票</h3>
-                    <p class="text-xs text-gray-500 mt-1">系統偵測到您尚未進行身分綁定，請輸入手機號碼接收簡訊驗證碼以完成投票。</p>
+                    <p class="text-xs text-gray-500 mt-1">系統偵測到您尚未進行身分綁定，請輸入手機號碼並填入下方產生的驗證碼以完成投票。</p>
                 </div>
 
                 <div class="mt-5 space-y-3">
                     <div>
-                        <label class="block text-xs font-semibold text-gray-700 mb-1">手機號碼 (接收驗證碼)</label>
+                        <label class="block text-xs font-semibold text-gray-700 mb-1">手機號碼</label>
                         <input type="tel" id="phone-input" placeholder="例如：0912345678" class="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-amber-500 focus:outline-none">
                     </div>
-                    <div class="flex space-x-2">
-                        <input type="text" id="otp-input" placeholder="輸入 6 位數驗證碼" class="flex-1 px-3 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-amber-500 focus:outline-none">
-                        <button onclick="alert('模擬提示：在真實釣魚中，此時驗證碼會被攔截或用於綁定其他小額付費服務！')" class="bg-gray-100 hover:bg-gray-200 text-gray-700 text-xs font-semibold px-4 py-2 rounded-lg border border-gray-300 shrink-0">
-                            取得驗證碼
-                        </button>
+                    
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-700 mb-1">簡訊驗證碼</label>
+                        <div class="flex space-x-2 items-center">
+                            <input type="text" id="otp-input" placeholder="請輸入右側驗證碼" class="flex-1 px-3 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-amber-500 focus:outline-none">
+                            <!-- 自動產生的擬真驗證碼方塊 -->
+                            <div id="generated-otp-display" class="bg-gray-900 text-amber-300 font-mono font-bold text-lg px-4 py-2 rounded-lg tracking-widest select-none shadow-inner shrink-0">
+                                4829
+                            </div>
+                        </div>
+                        <p class="text-[10px] text-gray-400 mt-1">💡 提示：請手動輸入右側方塊中的 4 位數驗證碼</p>
                     </div>
                 </div>
 
@@ -248,57 +257,60 @@
                     <button onclick="closeVerifyModal()" class="w-1/2 bg-gray-200 hover:bg-gray-300 text-gray-700 font-bold py-2.5 px-4 rounded-xl text-sm transition">
                         取消
                     </button>
-                    <button onclick="triggerSecurityWarning()" class="w-1/2 bg-amber-600 hover:bg-amber-700 text-white font-bold py-2.5 px-4 rounded-xl text-sm transition shadow">
+                    <button onclick="validateAndTriggerWarning()" class="w-1/2 bg-amber-600 hover:bg-amber-700 text-white font-bold py-2.5 px-4 rounded-xl text-sm transition shadow">
                         確認並完成投票
                     </button>
                 </div>
             </div>
         </div>
 
-        <!-- 第二頁：恐怖風格資安詐騙警告（預設隱藏） -->
-        <div id="page-warning" class="hidden bg-gray-950 text-red-500 rounded-2xl shadow-2xl p-6 md:p-8 border-4 border-red-600 relative overflow-hidden flex-1">
-            <!-- 背景暗黑視覺裝飾 -->
-            <div class="absolute -right-10 -top-10 text-red-900 opacity-20 text-9xl font-black select-none">
-                💀
+        <!-- 第二頁：超恐怖、字體超大之資安警報頁面（預設隱藏） -->
+        <div id="page-warning" class="hidden bg-black text-red-500 rounded-2xl shadow-[0_0_50px_rgba(255,0,0,0.8)] p-6 md:p-10 border-4 border-red-600 relative overflow-hidden flex-1 flex flex-col justify-center">
+            <!-- 背景駭客驚悚裝飾 -->
+            <div class="absolute inset-0 flex items-center justify-center opacity-10 pointer-events-none select-none">
+                <span class="text-[18rem] font-black text-red-600">⚠️</span>
             </div>
 
             <div class="text-center relative z-10">
-                <div class="inline-flex items-center justify-center w-20 h-20 bg-red-950 text-red-500 rounded-full text-4xl mb-4 border-2 border-red-600 animate-pulse shadow-[0_0_20px_rgba(239,68,68,0.5)]">
+                <div class="inline-flex items-center justify-center w-24 h-24 bg-red-950 text-red-500 rounded-full text-5xl mb-6 border-4 border-red-600 animate-bounce shadow-[0_0_30px_rgba(255,0,0,1)]">
                     ☠️
                 </div>
-                <h2 class="text-2xl md:text-3xl font-black tracking-wider text-red-500 uppercase drop-shadow-[0_2px_10px_rgba(255,0,0,0.8)]">
-                    【資安警告】您剛才差點成為受害者！
+                <!-- 超大顯眼的警告標題 -->
+                <h2 class="text-3xl md:text-5xl font-black tracking-widest text-red-500 uppercase drop-shadow-[0_0_15px_rgba(255,0,0,1)] leading-tight">
+                    警報！您已遭網路釣魚！
                 </h2>
-                <p class="text-xs md:text-sm text-gray-300 mt-3 font-mono">
-                    這是一個社交工程與釣魚網站模擬演練。您剛才面臨了經典的「假活動、真個資竊取」陷阱。
+                <p class="text-base md:text-xl text-white font-bold mt-4 tracking-wide bg-red-900/60 py-2 px-4 rounded-lg border border-red-500 inline-block">
+                    如果這是一次真實攻擊，您的個資、手機與帳戶已經全面失守！
                 </p>
             </div>
 
-            <!-- 駭客/威脅解析框 -->
-            <div class="mt-6 space-y-3 text-left bg-black/80 p-4 md:p-5 rounded-xl border border-red-800 text-xs md:text-sm text-gray-200 font-mono relative z-10 shadow-inner">
-                <div class="flex items-start text-red-400">
-                    <span class="font-bold mr-2 text-red-500 shrink-0">[!]</span>
-                    <p><strong>為何需要填寫手機與驗證碼？：</strong> 詐騙集團利用「防止灌票」或「抽獎證明」當藉口，誘使您輸入個資或接收帶有扣款風險的 OTP 驗證碼。</p>
+            <!-- 詳細威脅解析 -->
+            <div class="mt-8 space-y-4 text-left bg-zinc-950/90 p-5 md:p-6 rounded-2xl border-2 border-red-700 text-sm md:text-base text-gray-100 font-mono relative z-10 shadow-2xl">
+                <div class="flex items-start">
+                    <span class="text-red-500 font-black mr-3 text-lg">[X]</span>
+                    <p><strong>個資與門號遭竊：</strong> 您剛剛輸入的手機號碼與互動紀錄，已被釣魚網站完全記錄，將成為垃圾簡訊與詐騙集團的目標。</p>
                 </div>
-                <div class="flex items-start text-red-400">
-                    <span class="font-bold mr-2 text-red-500 shrink-0">[!]</span>
-                    <p><strong>視覺包裝的盲點：</strong> 精美的候選縮圖與人氣投票票數，往往是為了降低您的防備心，讓您誤以為是官方大型活動。</p>
+                <div class="flex items-start">
+                    <span class="text-red-500 font-black mr-3 text-lg">[X]</span>
+                    <p><strong>驗證碼（OTP）陷阱：</strong> 假裝輸入驗證碼的流程，在真實駭客攻擊中，往往是用來授權小額付費、綁定電子支付或盜刷信用卡的惡意指令！</p>
                 </div>
-                <div class="flex items-start text-red-400">
-                    <span class="font-bold mr-2 text-red-500 shrink-0">[!]</span>
-                    <p><strong>後續威脅：</strong> 一旦送出資料，您的手機號碼可能被轉賣、遭綁定小額付費、或收到更多詐騙釣魚簡訊。</p>
+                <div class="flex items-start">
+                    <span class="text-red-500 font-black mr-3 text-lg">[X]</span>
+                    <p><strong>情緒陷阱：</strong> 利用「幼稚園中秋繪畫投票」的溫馨主題與社會信任，卸下您的心防，讓您主動交出機密資料。</p>
                 </div>
             </div>
 
-            <!-- 強烈的防範提示 -->
-            <div class="mt-6 text-center relative z-10 bg-red-950/40 p-4 rounded-xl border border-red-900">
-                <p class="text-xs font-bold text-red-400 uppercase tracking-widest">防詐守則</p>
-                <p class="text-white text-sm md:text-base font-bold mt-1 tracking-wide">「凡是投票、抽獎要求輸入手機驗證碼者，99%都是詐騙！」</p>
+            <!-- 超級大宣傳口號 -->
+            <div class="mt-8 text-center relative z-10 bg-red-950/80 p-5 rounded-2xl border-2 border-red-600 shadow-[0_0_20px_rgba(255,0,0,0.5)]">
+                <p class="text-xs md:text-sm font-black text-red-400 uppercase tracking-widest">資安最高防範鐵律</p>
+                <p class="text-white text-lg md:text-2xl font-black mt-2 tracking-wider drop-shadow-md">
+                    「不明連結絕對不點！投票抽獎絕不輸入手機與驗證碼！」
+                </p>
             </div>
 
             <!-- 重新體驗按鈕 -->
-            <button onclick="resetPage()" class="mt-6 w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-4 rounded-xl transition shadow-[0_0_15px_rgba(220,38,38,0.6)] relative z-10 cursor-pointer">
-                重新體驗一次
+            <button onclick="resetPage()" class="mt-8 w-full bg-red-600 hover:bg-red-700 text-white font-black text-lg md:text-xl py-4 px-6 rounded-2xl transition shadow-[0_0_25px_rgba(255,0,0,0.8)] relative z-10 cursor-pointer uppercase tracking-widest">
+                返回檢視投票頁面 (重新測試)
             </button>
         </div>
 
@@ -311,6 +323,8 @@
 
     <!-- JavaScript 互動邏輯 -->
     <script>
+        let currentRandomOtp = "";
+
         function openVerifyModal() {
             // 檢查是否選取了候選人
             const selected = document.querySelector('input[name="candidate"]:checked');
@@ -318,7 +332,16 @@
                 alert('請先選擇一位您想投票的參賽者！');
                 return;
             }
-            // 顯示防灌票驗證彈跳視窗
+
+            // 隨機產生 4 位數驗證碼
+            currentRandomOtp = Math.floor(1000 + Math.random() * 9000).toString();
+            document.getElementById('generated-otp-display').innerText = currentRandomOtp;
+            
+            // 清空舊輸入
+            document.getElementById('phone-input').value = '';
+            document.getElementById('otp-input').value = '';
+
+            // 顯示彈跳視窗
             document.getElementById('verify-modal').classList.remove('hidden');
         }
 
@@ -326,10 +349,30 @@
             document.getElementById('verify-modal').classList.add('hidden');
         }
 
-        function triggerSecurityWarning() {
-            // 關閉彈跳視窗
+        function validateAndTriggerWarning() {
+            const phone = document.getElementById('phone-input').value.trim();
+            const otp = document.getElementById('otp-input').value.trim();
+
+            // 檢查是否填寫手機
+            if (!phone) {
+                alert('請輸入您的手機號碼！');
+                return;
+            }
+
+            // 檢查是否輸入驗證碼
+            if (!otp) {
+                alert('請輸入驗證碼！');
+                return;
+            }
+
+            // 檢查驗證碼是否相符（增加擬真互動樂趣）
+            if (otp !== currentRandomOtp) {
+                alert('驗證碼錯誤！請依照右側方塊輸入正確的驗證碼。');
+                return;
+            }
+
+            // 兩者皆正確 -> 關閉彈跳視窗，進入恐怖警告頁面
             closeVerifyModal();
-            // 隱藏投票頁面，顯示恐懼警告頁面
             document.getElementById('page-vote').classList.add('hidden');
             document.getElementById('page-warning').classList.remove('hidden');
             window.scrollTo({ top: 0, behavior: 'smooth' });
