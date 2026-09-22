@@ -10,22 +10,24 @@
 <body class="bg-amber-50 font-sans min-h-screen flex flex-col justify-between">
 
     <!-- 主容器 -->
-    <main class="container mx-auto px-4 py-8 max-w-2xl">
+    <main class="container mx-auto px-4 py-6 max-w-2xl flex-1 flex flex-col">
         
-        <!-- 第一頁：投票活動頁面（外觀擬真） -->
-        <div id="page-vote" class="bg-white rounded-2xl shadow-lg p-6 md:p-8 border border-amber-200">
-            <div class="text-center mb-6">
-                <h1 class="text-2xl font-bold text-gray-800 mt-2">🐰 歡樂中秋・幼兒園繪畫人氣票選 🌕</h1>
-                <p class="text-sm text-gray-500 mt-1">請為您支持的小寶貝投下神聖的一票，每人限投一次！活動只到本週五。</p>
+        <!-- 第一頁：投票活動頁面 -->
+        <!-- 調整說明：使用 flex 讓內部名單可以自適應滾動，並留出底部按鈕的空間 -->
+        <div id="page-vote" class="bg-white rounded-2xl shadow-lg p-5 md:p-8 border border-amber-200 flex-1 flex flex-col">
+            <div class="text-center mb-4 shrink-0">
+                <h1 class="text-xl md:text-2xl font-bold text-gray-800">🐰 歡樂中秋・幼兒園繪畫人氣票選 🌕</h1>
+                <p class="text-xs md:text-sm text-gray-500 mt-1">請為您支持的小寶貝投下神聖的一票，每人限投一次！</p>
             </div>
 
             <!-- 候選作品列表 (12人) -->
-            <div class="space-y-3 mb-6 max-h-[450px] overflow-y-auto pr-2">
+            <!-- 調整說明：設定固定的最大高度與滾動條，確保在小手機上也能順暢滑動瀏覽 -->
+            <div class="space-y-3 mb-4 overflow-y-auto pr-1 flex-1 max-h-[50vh] md:max-h-[450px] border border-gray-100 rounded-xl p-2">
                 <!-- 01 -->
                 <label class="flex items-center p-3 border rounded-xl cursor-pointer hover:bg-amber-50 transition border-gray-200">
-                    <input type="radio" name="candidate" value="1" class="w-4 h-4 text-amber-600 focus:ring-amber-500">
-                    <div class="ml-4 flex items-center">
-                        <div class="w-10 h-10 bg-amber-100 rounded-lg flex items-center justify-center text-lg">🎨</div>
+                    <input type="radio" name="candidate" value="1" class="w-4 h-4 text-amber-600 focus:ring-amber-500 shrink-0">
+                    <div class="ml-3 flex items-center">
+                        <div class="w-9 h-9 bg-amber-100 rounded-lg flex items-center justify-center text-base shrink-0">🎨</div>
                         <div class="ml-3">
                             <p class="font-semibold text-gray-800 text-sm">01號 - 小寶（小班）</p>
                             <p class="text-xs text-gray-500">作品：玉兔搗藥慶中秋</p>
@@ -34,9 +36,9 @@
                 </label>
                 <!-- 02 -->
                 <label class="flex items-center p-3 border rounded-xl cursor-pointer hover:bg-amber-50 transition border-gray-200">
-                    <input type="radio" name="candidate" value="2" class="w-4 h-4 text-amber-600 focus:ring-amber-500">
-                    <div class="ml-4 flex items-center">
-                        <div class="w-10 h-10 bg-amber-100 rounded-lg flex items-center justify-center text-lg">🖌️</div>
+                    <input type="radio" name="candidate" value="2" class="w-4 h-4 text-amber-600 focus:ring-amber-500 shrink-0">
+                    <div class="ml-3 flex items-center">
+                        <div class="w-9 h-9 bg-amber-100 rounded-lg flex items-center justify-center text-base shrink-0">🖌️</div>
                         <div class="ml-3">
                             <p class="font-semibold text-gray-800 text-sm">02號 - 恩恩（中班）</p>
                             <p class="text-xs text-gray-500">作品：美味的烤肉派對</p>
@@ -45,9 +47,9 @@
                 </label>
                 <!-- 03 -->
                 <label class="flex items-center p-3 border rounded-xl cursor-pointer hover:bg-amber-50 transition border-gray-200">
-                    <input type="radio" name="candidate" value="3" class="w-4 h-4 text-amber-600 focus:ring-amber-500">
-                    <div class="ml-4 flex items-center">
-                        <div class="w-10 h-10 bg-amber-100 rounded-lg flex items-center justify-center text-lg">🎨</div>
+                    <input type="radio" name="candidate" value="3" class="w-4 h-4 text-amber-600 focus:ring-amber-500 shrink-0">
+                    <div class="ml-3 flex items-center">
+                        <div class="w-9 h-9 bg-amber-100 rounded-lg flex items-center justify-center text-base shrink-0">🎨</div>
                         <div class="ml-3">
                             <p class="font-semibold text-gray-800 text-sm">03號 - 宇翔（大班）</p>
                             <p class="text-xs text-gray-500">作品：巨大的大金黃月亮</p>
@@ -56,9 +58,9 @@
                 </label>
                 <!-- 04 -->
                 <label class="flex items-center p-3 border rounded-xl cursor-pointer hover:bg-amber-50 transition border-gray-200">
-                    <input type="radio" name="candidate" value="4" class="w-4 h-4 text-amber-600 focus:ring-amber-500">
-                    <div class="ml-4 flex items-center">
-                        <div class="w-10 h-10 bg-amber-100 rounded-lg flex items-center justify-center text-lg">🖍️</div>
+                    <input type="radio" name="candidate" value="4" class="w-4 h-4 text-amber-600 focus:ring-amber-500 shrink-0">
+                    <div class="ml-3 flex items-center">
+                        <div class="w-9 h-9 bg-amber-100 rounded-lg flex items-center justify-center text-base shrink-0">🖍️</div>
                         <div class="ml-3">
                             <p class="font-semibold text-gray-800 text-sm">04號 - 晴晴（中班）</p>
                             <p class="text-xs text-gray-500">作品：嫦娥與可愛的小白兔</p>
@@ -67,9 +69,9 @@
                 </label>
                 <!-- 05 -->
                 <label class="flex items-center p-3 border rounded-xl cursor-pointer hover:bg-amber-50 transition border-gray-200">
-                    <input type="radio" name="candidate" value="5" class="w-4 h-4 text-amber-600 focus:ring-amber-500">
-                    <div class="ml-4 flex items-center">
-                        <div class="w-10 h-10 bg-amber-100 rounded-lg flex items-center justify-center text-lg">🎨</div>
+                    <input type="radio" name="candidate" value="5" class="w-4 h-4 text-amber-600 focus:ring-amber-500 shrink-0">
+                    <div class="ml-3 flex items-center">
+                        <div class="w-9 h-9 bg-amber-100 rounded-lg flex items-center justify-center text-base shrink-0">🎨</div>
                         <div class="ml-3">
                             <p class="font-semibold text-gray-800 text-sm">05號 - 宥廷（小班）</p>
                             <p class="text-xs text-gray-500">作品：一家人一起看煙火</p>
@@ -78,9 +80,9 @@
                 </label>
                 <!-- 06 -->
                 <label class="flex items-center p-3 border rounded-xl cursor-pointer hover:bg-amber-50 transition border-gray-200">
-                    <input type="radio" name="candidate" value="6" class="w-4 h-4 text-amber-600 focus:ring-amber-500">
-                    <div class="ml-4 flex items-center">
-                        <div class="w-10 h-10 bg-amber-100 rounded-lg flex items-center justify-center text-lg">🖌️</div>
+                    <input type="radio" name="candidate" value="6" class="w-4 h-4 text-amber-600 focus:ring-amber-500 shrink-0">
+                    <div class="ml-3 flex items-center">
+                        <div class="w-9 h-9 bg-amber-100 rounded-lg flex items-center justify-center text-base shrink-0">🖌️</div>
                         <div class="ml-3">
                             <p class="font-semibold text-gray-800 text-sm">06號 - 妤安（大班）</p>
                             <p class="text-xs text-gray-500">作品：香甜的柚子帽</p>
@@ -89,9 +91,9 @@
                 </label>
                 <!-- 07 -->
                 <label class="flex items-center p-3 border rounded-xl cursor-pointer hover:bg-amber-50 transition border-gray-200">
-                    <input type="radio" name="candidate" value="7" class="w-4 h-4 text-amber-600 focus:ring-amber-500">
-                    <div class="ml-4 flex items-center">
-                        <div class="w-10 h-10 bg-amber-100 rounded-lg flex items-center justify-center text-lg">🎨</div>
+                    <input type="radio" name="candidate" value="7" class="w-4 h-4 text-amber-600 focus:ring-amber-500 shrink-0">
+                    <div class="ml-3 flex items-center">
+                        <div class="w-9 h-9 bg-amber-100 rounded-lg flex items-center justify-center text-base shrink-0">🎨</div>
                         <div class="ml-3">
                             <p class="font-semibold text-gray-800 text-sm">07號 - 睿睿（中班）</p>
                             <p class="text-xs text-gray-500">作品：飛向月球的火箭</p>
@@ -100,9 +102,9 @@
                 </label>
                 <!-- 08 -->
                 <label class="flex items-center p-3 border rounded-xl cursor-pointer hover:bg-amber-50 transition border-gray-200">
-                    <input type="radio" name="candidate" value="8" class="w-4 h-4 text-amber-600 focus:ring-amber-500">
-                    <div class="ml-4 flex items-center">
-                        <div class="w-10 h-10 bg-amber-100 rounded-lg flex items-center justify-center text-lg">🖍️</div>
+                    <input type="radio" name="candidate" value="8" class="w-4 h-4 text-amber-600 focus:ring-amber-500 shrink-0">
+                    <div class="ml-3 flex items-center">
+                        <div class="w-9 h-9 bg-amber-100 rounded-lg flex items-center justify-center text-base shrink-0">🖍️</div>
                         <div class="ml-3">
                             <p class="font-semibold text-gray-800 text-sm">08號 - 芝芝（小班）</p>
                             <p class="text-xs text-gray-500">作品：發光的小燈籠</p>
@@ -111,9 +113,9 @@
                 </label>
                 <!-- 09 -->
                 <label class="flex items-center p-3 border rounded-xl cursor-pointer hover:bg-amber-50 transition border-gray-200">
-                    <input type="radio" name="candidate" value="9" class="w-4 h-4 text-amber-600 focus:ring-amber-500">
-                    <div class="ml-4 flex items-center">
-                        <div class="w-10 h-10 bg-amber-100 rounded-lg flex items-center justify-center text-lg">🎨</div>
+                    <input type="radio" name="candidate" value="9" class="w-4 h-4 text-amber-600 focus:ring-amber-500 shrink-0">
+                    <div class="ml-3 flex items-center">
+                        <div class="w-9 h-9 bg-amber-100 rounded-lg flex items-center justify-center text-base shrink-0">🎨</div>
                         <div class="ml-3">
                             <p class="font-semibold text-gray-800 text-sm">09號 - 楷哥哥（大班）</p>
                             <p class="text-xs text-gray-500">作品：中秋夜烤肉香</p>
@@ -122,9 +124,9 @@
                 </label>
                 <!-- 10 -->
                 <label class="flex items-center p-3 border rounded-xl cursor-pointer hover:bg-amber-50 transition border-gray-200">
-                    <input type="radio" name="candidate" value="10" class="w-4 h-4 text-amber-600 focus:ring-amber-500">
-                    <div class="ml-4 flex items-center">
-                        <div class="w-10 h-10 bg-amber-100 rounded-lg flex items-center justify-center text-lg">🖌️</div>
+                    <input type="radio" name="candidate" value="10" class="w-4 h-4 text-amber-600 focus:ring-amber-500 shrink-0">
+                    <div class="ml-3 flex items-center">
+                        <div class="w-9 h-9 bg-amber-100 rounded-lg flex items-center justify-center text-base shrink-0">🖌️</div>
                         <div class="ml-3">
                             <p class="font-semibold text-gray-800 text-sm">10號 - 芯芯（中班）</p>
                             <p class="text-xs text-gray-500">作品：月亮上的秘密基地</p>
@@ -133,9 +135,9 @@
                 </label>
                 <!-- 11 -->
                 <label class="flex items-center p-3 border rounded-xl cursor-pointer hover:bg-amber-50 transition border-gray-200">
-                    <input type="radio" name="candidate" value="11" class="w-4 h-4 text-amber-600 focus:ring-amber-500">
-                    <div class="ml-4 flex items-center">
-                        <div class="w-10 h-10 bg-amber-100 rounded-lg flex items-center justify-center text-lg">🎨</div>
+                    <input type="radio" name="candidate" value="11" class="w-4 h-4 text-amber-600 focus:ring-amber-500 shrink-0">
+                    <div class="ml-3 flex items-center">
+                        <div class="w-9 h-9 bg-amber-100 rounded-lg flex items-center justify-center text-base shrink-0">🎨</div>
                         <div class="ml-3">
                             <p class="font-semibold text-gray-800 text-sm">11號 - 樂樂（小班）</p>
                             <p class="text-xs text-gray-500">作品：可愛的小白兔吃月餅</p>
@@ -144,9 +146,9 @@
                 </label>
                 <!-- 12 -->
                 <label class="flex items-center p-3 border rounded-xl cursor-pointer hover:bg-amber-50 transition border-gray-200">
-                    <input type="radio" name="candidate" value="12" class="w-4 h-4 text-amber-600 focus:ring-amber-500">
-                    <div class="ml-4 flex items-center">
-                        <div class="w-10 h-10 bg-amber-100 rounded-lg flex items-center justify-center text-lg">🖍️</div>
+                    <input type="radio" name="candidate" value="12" class="w-4 h-4 text-amber-600 focus:ring-amber-500 shrink-0">
+                    <div class="ml-3 flex items-center">
+                        <div class="w-9 h-9 bg-amber-100 rounded-lg flex items-center justify-center text-base shrink-0">🖍️</div>
                         <div class="ml-3">
                             <p class="font-semibold text-gray-800 text-sm">12號 - 阿弟（大班）</p>
                             <p class="text-xs text-gray-500">作品：柚子皮做的大帽帽</p>
@@ -155,14 +157,16 @@
                 </label>
             </div>
 
-            <!-- 投票按鈕 -->
-            <button onclick="submitVote()" class="w-full bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 px-4 rounded-xl transition shadow-md">
-                確認送出投票
-            </button>
+            <!-- 投票按鈕（固定或底部靠齊） -->
+            <div class="shrink-0 pt-2">
+                <button onclick="submitVote()" class="w-full bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 px-4 rounded-xl transition shadow-md cursor-pointer">
+                    確認送出投票
+                </button>
+            </div>
         </div>
 
         <!-- 第二頁：恐怖風格資安詐騙警告（預設隱藏） -->
-        <div id="page-warning" class="hidden bg-gray-950 text-red-500 rounded-2xl shadow-2xl p-6 md:p-8 border-4 border-red-600 relative overflow-hidden">
+        <div id="page-warning" class="hidden bg-gray-950 text-red-500 rounded-2xl shadow-2xl p-6 md:p-8 border-4 border-red-600 relative overflow-hidden flex-1">
             <!-- 背景暗黑視覺裝飾 -->
             <div class="absolute -right-10 -top-10 text-red-900 opacity-20 text-9xl font-black select-none">
                 💀
@@ -172,26 +176,26 @@
                 <div class="inline-flex items-center justify-center w-20 h-20 bg-red-950 text-red-500 rounded-full text-4xl mb-4 border-2 border-red-600 animate-pulse shadow-[0_0_20px_rgba(239,68,68,0.5)]">
                     ☠️
                 </div>
-                <h2 class="text-3xl font-black tracking-wider text-red-500 uppercase drop-shadow-[0_2px_10px_rgba(255,0,0,0.8)]">
+                <h2 class="text-2xl md:text-3xl font-black tracking-wider text-red-500 uppercase drop-shadow-[0_2px_10px_rgba(255,0,0,0.8)]">
                     【警告】您已落入釣魚陷阱！
                 </h2>
-                <p class="text-sm text-gray-300 mt-3 font-mono">
+                <p class="text-xs md:text-sm text-gray-300 mt-3 font-mono">
                     這不是真正的投票網站。如果這是真實的網路攻擊，您的裝置、個資與帳戶已經遭到嚴重威脅。
                 </p>
             </div>
 
             <!-- 駭客/威脅解析框 -->
-            <div class="mt-6 space-y-3 text-left bg-black/80 p-5 rounded-xl border border-red-800 text-sm text-gray-200 font-mono relative z-10 shadow-inner">
+            <div class="mt-6 space-y-3 text-left bg-black/80 p-4 md:p-5 rounded-xl border border-red-800 text-xs md:text-sm text-gray-200 font-mono relative z-10 shadow-inner">
                 <div class="flex items-start text-red-400">
-                    <span class="font-bold mr-2 text-red-500">[!]</span>
+                    <span class="font-bold mr-2 text-red-500 shrink-0">[!]</span>
                     <p><strong>遠端控制與個資收割：</strong> 假冒活動背後通常夾帶惡意腳本，靜默擷取您的 Cookie、瀏覽器指紋及儲存的密碼。</p>
                 </div>
                 <div class="flex items-start text-red-400">
-                    <span class="font-bold mr-2 text-red-500">[!]</span>
+                    <span class="font-bold mr-2 text-red-500 shrink-0">[!]</span>
                     <p><strong>帳號綁架危機：</strong> 接著可能跳出「請輸入LINE/Google帳號驗證身分」，一旦輸入，您的社群與雲端即刻失守。</p>
                 </div>
                 <div class="flex items-start text-red-400">
-                    <span class="font-bold mr-2 text-red-500">[!]</span>
+                    <span class="font-bold mr-2 text-red-500 shrink-0">[!]</span>
                     <p><strong>財務直接損失：</strong> 以「領取獎品」或「支付小額手續費」為由，側錄您的信用卡號及 OTP 授權碼。</p>
                 </div>
             </div>
@@ -199,7 +203,7 @@
             <!-- 強烈的防範提示 -->
             <div class="mt-6 text-center relative z-10 bg-red-950/40 p-4 rounded-xl border border-red-900">
                 <p class="text-xs font-bold text-red-400 uppercase tracking-widest">資安鐵律</p>
-                <p class="text-white text-base font-bold mt-1 tracking-wide">「天下沒有白吃的午餐，不明連結絕對不要亂點！」</p>
+                <p class="text-white text-sm md:text-base font-bold mt-1 tracking-wide">「天下沒有白吃的午餐，不明連結絕對不要亂點！」</p>
             </div>
 
             <!-- 重新體驗按鈕 -->
@@ -211,25 +215,22 @@
     </main>
 
     <!-- 頁尾 -->
-    <footer class="text-center py-4 text-xs text-gray-400">
+    <footer class="text-center py-3 text-xs text-gray-400 shrink-0">
         資安教育宣導防範模擬 &copy; 2026 Security Awareness Demo
     </footer>
 
     <!-- 頁面切換 JavaScript -->
     <script>
         function submitVote() {
-            // 隱藏投票頁面，顯示恐怖警告頁面
             document.getElementById('page-vote').classList.add('hidden');
             document.getElementById('page-warning').classList.remove('hidden');
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
         function resetPage() {
-            // 恢復投票頁面，隱藏警告頁面
             document.getElementById('page-warning').classList.add('hidden');
             document.getElementById('page-vote').classList.remove('hidden');
             
-            // 清除選取狀態
             const radios = document.querySelectorAll('input[name="candidate"]');
             radios.forEach(radio => radio.checked = false);
             window.scrollTo({ top: 0, behavior: 'smooth' });
