@@ -20,15 +20,16 @@ body{
     background:#f5f5f5;
     font-family:"Microsoft JhengHei",sans-serif;
     text-align:center;
-    transition:all 0.5s ease;
+    transition:all .5s ease;
 }
 
 .container{
     padding:40px;
-    background:white;
+    background:#fff;
     border-radius:20px;
-    box-shadow:0 0 30px rgba(0,0,0,0.2);
+    box-shadow:0 0 30px rgba(0,0,0,.2);
     max-width:700px;
+    margin:20px;
 }
 
 button{
@@ -39,7 +40,7 @@ button{
     border-radius:10px;
     cursor:pointer;
     background:#ff4081;
-    color:white;
+    color:#fff;
     font-weight:bold;
 }
 
@@ -58,20 +59,14 @@ button:hover{
 .scam{
     background:#1a0000;
     color:white;
-    border:5px solid #ff0000;
+    border:5px solid red;
     animation:flash 1s infinite;
 }
 
 @keyframes flash{
-    0%{
-        box-shadow:0 0 10px red;
-    }
-    50%{
-        box-shadow:0 0 50px red;
-    }
-    100%{
-        box-shadow:0 0 10px red;
-    }
+    0%{box-shadow:0 0 10px red;}
+    50%{box-shadow:0 0 50px red;}
+    100%{box-shadow:0 0 10px red;}
 }
 
 .scam-title{
@@ -86,7 +81,7 @@ button:hover{
 }
 
 .scam-mode{
-    background:#300 !important;
+    background:#300;
 }
 
 .skull{
@@ -104,15 +99,13 @@ button:hover{
     color:#00ff66;
     font-family:monospace;
     margin-top:20px;
-    font-size:1rem;
+    line-height:1.8;
 }
 
 </style>
-
 </head>
-<body>
 
-<!-- 第一頁 -->
+<body>
 
 <div class="container" id="votePage">
 
@@ -132,25 +125,17 @@ button:hover{
 
 </div>
 
-<!-- 假載入頁 -->
-
 <div class="container hidden" id="loadingPage">
 
     <h2>正在驗證投票資格...</h2>
 
-    <div class="loading">
-        請稍候...
-    </div>
+    <div class="loading">請稍候...</div>
 
     <br>
 
-    <div>
-        正在連線伺服器...
-    </div>
+    <div>正在連線伺服器...</div>
 
 </div>
-
-<!-- 第二頁 -->
 
 <div class="container scam hidden" id="scamPage">
 
@@ -161,19 +146,19 @@ button:hover{
     </h1>
 
     <p style="font-size:1.4rem;">
-        如果這是一個真正的詐騙網站，
-        你可能已經交出了重要資訊。
+        如果這是真正的詐騙網站，
+        你的個人資訊可能已遭到竊取。
     </p>
 
     <p class="warning">
-        帳號、密碼、信用卡資料都有可能遭受竊取
+        帳號、密碼、信用卡資料都有可能外洩
     </p>
 
     <div class="fake-status">
-        > 掃描使用者資料...<br>
-        > 讀取聯絡資訊...<br>
-        > 上傳中...<br>
-        > 存取完成...
+        ＞ 掃描使用者資料...<br>
+        ＞ 讀取聯絡資訊...<br>
+        ＞ 傳送至遠端主機...<br>
+        ＞ 完成
     </div>
 
     <hr style="margin:30px 0;">
@@ -185,5 +170,21 @@ button:hover{
     </p>
 
     <p>
-        ❌ 不點擊可疑網址<br>
-        ❌
+        ❌ 不點擊可疑連結<br>
+        ❌ 不隨意輸入帳號密碼<br>
+        ❌ 不開啟不明附件<br>
+        ✅ 收到異常訊息先查證
+    </p>
+
+    <button onclick="finishTraining()">
+        我以後會更小心
+    </button>
+
+</div>
+
+<script>
+
+function showLoading(){
+
+    document.getElementById("votePage").classList.add("hidden");
+    document.getElementById("loadingPage").classList
