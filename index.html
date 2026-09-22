@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>🎨 幼兒園創意繪畫比賽投票</title>
+
+<meta property="og:title" content="🎨 幼兒園創意繪畫比賽投票">
+<meta property="og:description" content="請幫忙支持小朋友的作品，感謝您的鼓勵與支持。">
+
+<style>
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#f5f5f5;
+    font-family:"Microsoft JhengHei",sans-serif;
+    text-align:center;
+}
+
+.container{
+    padding:40px;
+    background:white;
+    border-radius:20px;
+    box-shadow:0 0 30px rgba(0,0,0,0.2);
+    max-width:700px;
+}
+
+button{
+    margin-top:20px;
+    padding:12px 24px;
+    font-size:1.2rem;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    background:#ff4081;
+    color:white;
+    font-weight:bold;
+}
+
+button:hover{
+    background:#e91e63;
+}
+
+.hidden{
+    display:none;
+}
+
+.scam{
+    background:#990000;
+    color:white;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container" id="votePage">
+
+    <h1>🎨 2026幼兒園創意繪畫比賽</h1>
+
+    <p>請幫忙支持小朋友的創意作品 ❤️</p>
+
+    <p>作品名稱：我的夢想城市</p>
+
+    <p>目前排名：第 12 名</p>
+
+    <p>距離前 10 名只差 27 票</p>
+
+    <button onclick="showTruth()">
+        👍 投下支持的一票
+    </button>
+
+</div>
+
+<div class="container scam hidden" id="scamPage">
+
+    <h1>🚨 你被詐騙了！ 🚨</h1>
+
+    <p>其實根本沒有什麼幼兒園繪畫投票活動 😆</p>
+
+    <p>恭喜完成資安意識測驗！</p>
+
+    <button onclick="alert('請勿隨意點擊不明連結！')">
+        我知道了
+    </button>
+
+</div>
+
+<script>
+function showTruth() {
+    document.getElementById("votePage").classList.add("hidden");
+    document.getElementById("scamPage").classList.remove("hidden");
+}
+</script>
+
+</body>
+</html>
